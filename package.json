@@ -1,0 +1,8 @@
+{
+  "name": "pagaleve-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CristhyanKo/pagaleve-challenge-service",
+  "author": "Cristhyan Kohlhase <cristhyan.ko@outlook.com>",
+  "license": "MIT"
+}
