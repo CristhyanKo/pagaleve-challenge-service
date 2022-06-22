@@ -1,0 +1,10 @@
+{
+	"error.validation": "Erro de validação: ",
+	"error.payload": "Payload inválido",
+	"service.base.store": "Registro cadastrado com sucesso",
+	"service.base.update": "Registro atualizado com sucesso",
+	"service.base.delete": "Registro deletado com sucesso",
+	"customer.name.required": "[name] o campo Nome é obrigatório",
+	"customer.email.required": "[email] o campo Email é obrigatório",
+	"customer.phone.required": "[phone] o campo Telefone é obrigatório"
+}

@@ -2,12 +2,13 @@ import { model, Schema } from 'mongoose'
 import mongooseAutoPopulate from 'mongoose-autopopulate'
 import mongoosePaginate from 'mongoose-paginate-v2'
 import ICustomer from './Interfaces/ICustomer'
+import { t } from 'i18next'
 
 const schema = new Schema<ICustomer>(
 	{
 		name: {
 			type: String,
-			required: [true, 'O nome é obrigatório'],
+			required: [true, t('customer.name.required')],
 			trim: true,
 			minlength: 3,
 			maxlength: 50,
@@ -20,11 +21,11 @@ const schema = new Schema<ICustomer>(
 		},
 		email: {
 			type: String,
-			required: true,
+			required: [true, t('customer.email.required')],
 		},
 		phone: {
 			type: String,
-			required: true,
+			required: [true, t('customer.phone.required')],
 		},
 	},
 	{

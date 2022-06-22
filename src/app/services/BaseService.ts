@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
+import { t } from 'i18next'
 import { Model } from 'mongoose'
 
 export default class BaseService<ModelType> {
@@ -13,7 +14,7 @@ export default class BaseService<ModelType> {
 
 		return {
 			result: {
-				message: 'Cadastro realizado com sucesso !',
+				message: t('service.base.store'),
 				data: result,
 			},
 		}
@@ -25,7 +26,7 @@ export default class BaseService<ModelType> {
 
 		return {
 			result: {
-				message: 'Cadastro atualizado com sucesso !',
+				message: t('service.base.update'),
 				data: result,
 			},
 		}
@@ -68,7 +69,7 @@ export default class BaseService<ModelType> {
 
 		return {
 			result: {
-				message: 'Cadastro deletado com sucesso !',
+				message: t('service.base.delete'),
 				data: result,
 			},
 		}

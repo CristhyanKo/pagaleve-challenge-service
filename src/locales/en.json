@@ -1,0 +1,10 @@
+{
+	"error.validation": "Validation error: ",
+	"error.payload": "Invalid payload",
+	"service.base.store": "Registration successfully completed",
+	"service.base.update": "Registration successfully updated",
+	"service.base.delete": "Registration successfully deleted",
+	"customer.name.required": "[name] is required",
+	"customer.email.required": "[email] is required",
+	"customer.phone.required": "[phone] is required"
+}

@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import { ChangeLanguage } from '../../utils/ChangeLanguage'
 import BaseService from '../services/BaseService'
 
 export default class BaseController<ModelType> {
@@ -7,27 +8,32 @@ export default class BaseController<ModelType> {
 	}
 
 	public async store(req: Request, res: Response): Promise<Response> {
+		ChangeLanguage(<string>req.headers.locale)
 		const result = await this.service.store(req.body)
 		return res.json(result)
 	}
 
 	public async update(req: Request, res: Response): Promise<Response> {
+		ChangeLanguage(<string>req.headers.locale)
 		const id = req.query.id || req.params.id
 		const result = await this.service.update(<string>id, req.body)
 		return res.json(result)
 	}
 
 	public async get(req: Request, res: Response): Promise<Response> {
+		ChangeLanguage(<string>req.headers.locale)
 		const result = await this.service.get(req.body)
 		return res.json(result)
 	}
 
-	public async getAll(_: Request, res: Response): Promise<Response> {
+	public async getAll(req: Request, res: Response): Promise<Response> {
+		ChangeLanguage(<string>req.headers.locale)
 		const result = await this.service.getAll()
 		return res.json(result)
 	}
 
 	public async getAllWithPaginate(req: Request, res: Response): Promise<Response> {
+		ChangeLanguage(<string>req.headers.locale)
 		const page = req.query.page || req.params.page || 1
 		const limit = req.query.limit || req.params.limit || 30
 
@@ -36,6 +42,7 @@ export default class BaseController<ModelType> {
 	}
 
 	public async delete(req: Request, res: Response): Promise<Response> {
+		ChangeLanguage(<string>req.headers.locale)
 		const id = req.query.id || req.params.id
 
 		const result = await this.service.delete(<string>id)
