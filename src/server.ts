@@ -30,7 +30,7 @@ export class Server {
 			.use(i18nextBanckend)
 			.use(i18nMiddleware.LanguageDetector)
 			.init({
-				fallbackLng: 'ptBr',
+				fallbackLng: 'en',
 				backend: {
 					loadPath: 'src/locales/{{lng}}.json',
 				},
