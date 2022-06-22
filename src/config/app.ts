@@ -1,3 +1,3 @@
 export const app = {
-	apiPrefix: `/api/v1`,
+	apiPrefix: `/api/v1/`,
 }

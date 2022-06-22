@@ -1,7 +1,7 @@
 import express from 'express'
 
 const server = express()
-const endPoints = ['initial']
+const endPoints = ['customer']
 
 console.log('🟡 [ROUTER] Mapping endpoints...')
 
@@ -10,10 +10,9 @@ endPoints.forEach(async (endPoint) => {
 		await import(`./${endPoint}`).then((module) => {
 			server.use(`/${endPoint}`, module.default)
 		})
+		console.log(`🟢 [ROUTER] Endpoint "${endPoint}" mapped`)
 	} catch {
 		console.log(`🔥 [ROUTER] Endpoint ${endPoint} not found`)
-	} finally {
-		console.log(`🟢 [ROUTER] Endpoint "${endPoint}" mapped`)
 	}
 })
 
