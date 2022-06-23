@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { t } from 'i18next'
-import { Model } from 'mongoose'
+import { FilterQuery, Model } from 'mongoose'
 
 export default class BaseService<ModelType> {
 	model: Model<ModelType>
@@ -21,8 +21,7 @@ export default class BaseService<ModelType> {
 	}
 
 	public async update(id: string, data: object): Promise<object> {
-		// @ts-ignore
-		const result = await this.model.findOneAndUpdate({ _id: id }, data, { new: true })
+		const result = await this.model.findOneAndUpdate({ _id: id } as FilterQuery<ModelType>, data, { new: true })
 
 		return {
 			result: {
