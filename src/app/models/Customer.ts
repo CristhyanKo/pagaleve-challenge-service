@@ -22,6 +22,7 @@ const schema = new Schema<ICustomer>(
 		email: {
 			type: String,
 			required: [true, t('customer.email.required')],
+			unique: true,
 		},
 		phone: {
 			type: String,
