@@ -16,7 +16,7 @@ export default class BaseRouter<ModelType> {
 		this.router.post('/update/:id', (req, res, next) => this._controller.update(req, res).catch(next))
 		this.router.delete('/delete', (req, res, next) => this._controller.delete(req, res).catch(next))
 		this.router.delete('/delete/:id', (req, res, next) => this._controller.delete(req, res).catch(next))
-		this.router.get('/get', (req, res, next) => this._controller.get(req, res).catch(next))
+		this.router.post('/getOne', (req, res, next) => this._controller.getOne(req, res).catch(next))
 		this.router.get('/getAll', (req, res, next) => this._controller.getAll(req, res).catch(next))
 		this.router.get('/getAllWithPaginate', (req, res, next) => this._controller.getAllWithPaginate(req, res).catch(next))
 		this.router.get('/getAllWithPaginate/:page/:limit', (req, res, next) => this._controller.getAllWithPaginate(req, res).catch(next))

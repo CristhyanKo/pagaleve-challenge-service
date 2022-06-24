@@ -20,7 +20,7 @@ export default class BaseController<ModelType> {
 		return res.json(result)
 	}
 
-	public async get(req: Request, res: Response): Promise<Response> {
+	public async getOne(req: Request, res: Response): Promise<Response> {
 		ChangeLanguage(<string>req.headers.locale)
 		const result = await this.service.get(req.body)
 		return res.json(result)
@@ -43,7 +43,7 @@ export default class BaseController<ModelType> {
 
 	public async delete(req: Request, res: Response): Promise<Response> {
 		ChangeLanguage(<string>req.headers.locale)
-		const id = req.query.id || req.params.id
+		const id = req.query.id || req.params.id || req.body.id
 
 		const result = await this.service.delete(<string>id)
 		return res.json(result)
