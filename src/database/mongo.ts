@@ -1,4 +1,4 @@
-import { connect, ConnectOptions, connection } from 'mongoose'
+import { connect, connection } from 'mongoose'
 
 export const connectToDatabase = async () => {
 	try {
