@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "nodemon",
-		"build": "tsc",
+		"build": "eslint . --ext .ts && tsc",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint --fix --ignore-path .gitignore ."
 	},
