@@ -1,6 +1,8 @@
 # API Rest for Customers - Pagaleve Challenge
 
-![](https://wallet.pagaleve.com.br/6515fddd250fb36e7500.png)
+<div style="text-align: center; margin: 40px 0">
+<img src="https://wallet.pagaleve.com.br/6515fddd250fb36e7500.png" width="400" />
+</div>
 
 This application was developed for the challenge made by the company Pagaleve
 
