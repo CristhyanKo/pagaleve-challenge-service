@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { t } from 'i18next'
 import { FilterQuery, Model } from 'mongoose'
+import IResult from './Interfaces/IResult'
 
 export default class BaseService<ModelType> {
 	model: Model<ModelType>
@@ -9,15 +10,17 @@ export default class BaseService<ModelType> {
 		this.model = model
 	}
 
-	public async store(data: object): Promise<object> {
-		const result = await this.model.create(data)
+	public async store(data: object): Promise<IResult> {
+		const resultCreate = await this.model.create(data)
 
-		return {
+		const result: IResult = {
 			result: {
 				message: t('service.base.store'),
-				data: result,
+				data: resultCreate,
 			},
 		}
+
+		return result
 	}
 
 	public async update(id: string, data: object): Promise<object> {
