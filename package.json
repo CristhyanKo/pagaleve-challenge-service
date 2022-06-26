@@ -10,7 +10,7 @@
 		"build": "eslint . --ext .ts && tsc",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint --fix --ignore-path .gitignore .",
-		"test": "jest --testEnvironment=node "
+		"test": "jest --testEnvironment=node --passWithNoTests"
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.12",
