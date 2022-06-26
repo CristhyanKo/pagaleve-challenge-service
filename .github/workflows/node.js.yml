@@ -37,6 +37,7 @@ jobs:
         else
         npm i
         fi
+      working-directory: client
 
     - name: Run Tests
       run: |
@@ -45,6 +46,7 @@ jobs:
         else
         npm run test
         fi
+      working-directory: client
 
     - name: Build
       run:  |
