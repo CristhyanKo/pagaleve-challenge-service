@@ -63,12 +63,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Build Folder
-      run: cd build
     - name: Heroku Deploy
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "pagaleve-challenge"
         heroku_email: "cristhyan.ko@outlook.com"
-        procfile: "web: node index.js"
+        procfile: "web: node build/index.js"
