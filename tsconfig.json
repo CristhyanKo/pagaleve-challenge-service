@@ -1,6 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "es5",
+		"types": [
+			"jest",
+			"node"
+		],
 		"module": "commonjs",
 		"lib": [
 			"es5",
@@ -19,5 +23,11 @@
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
 		"removeComments": true,
-	}
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+	],
 }
