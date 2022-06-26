@@ -51,6 +51,12 @@ MONGO_DB_URI=mongodb://pagaleve:pagalevePass@localhost:27017/pagaleve?authSource
 ```
 
 Finally, with our database running, we can start our project by running:
+Npm:
+```bash
+npm run dev
+```
+
+Yarn:
 ```bash
 yarn dev
 ```
