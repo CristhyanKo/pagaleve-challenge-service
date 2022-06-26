@@ -1,5 +1,7 @@
 # API Rest for Customers - Pagaleve Challenge
 
+![](https://wallet.pagaleve.com.br/6515fddd250fb36e7500.png)
+
 This application was developed for the challenge made by the company Pagaleve
 
 The purpose of this API is to perform the basic management (CRUD) of clients, and the following technologies were used for development: Typescript, Node.js, Express, MongoDB, Mongoose, Jest, Morgan, i18next
