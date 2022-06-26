@@ -45,7 +45,7 @@ environment:
             - MONGO_INITDB_ROOT_PASSWORD=pagalevePass
 ```
 
-Now you need to create the environment variables file `.env` at the root of your project with the URL of your Mongo database (If you have created your bank instance with MongoDb Server, enter your connection url)
+Now you need to create the environment variables file `.env` at the root of your project with the URL of your Mongo database (If you have created your database instance with MongoDb Server, enter your connection url)
 ```env
 MONGO_DB_URI=mongodb://pagaleve:pagalevePass@localhost:27017/pagaleve?authSource=admin&readPreference=primary&ssl=false
 ```
