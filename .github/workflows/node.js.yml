@@ -38,6 +38,14 @@ jobs:
         npm i
         fi
 
+    - name: Run Tests
+      run: |
+        if [ -e yarn.lock ]; then
+        yarn test
+        else
+        npm run test
+        fi
+
     - name: Build
       run:  |
         if [ -e yarn.lock ]; then
