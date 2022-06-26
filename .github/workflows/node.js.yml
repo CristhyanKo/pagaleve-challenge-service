@@ -54,7 +54,7 @@ jobs:
     - name: Run Tests
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       working-directory: ./js-build
-      run: yarn
+      run: yarn test
 
     - name: Build
       working-directory: ./js-build
