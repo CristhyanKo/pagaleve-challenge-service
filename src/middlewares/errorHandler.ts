@@ -14,12 +14,12 @@ export const ErrorHandler = (error: InternalError, req: Request, res: Response, 
 			})
 
 			console.log(`🔥 [ERROR] ${error.message}`)
-			return res.status(500).json({ error: error.message })
+			return res.status(406).json({ error: error.message })
 		}
 
 		if (error.name === 'SyntaxError') {
 			console.log(`🔥 [ERROR] ${error.message}`)
-			return res.status(500).json({ error: t('error.payload') })
+			return res.status(406).json({ error: t('error.payload') })
 		}
 
 		if (error.name === 'MongoServerError' && error.code === 11000 && error.keyValue) {
@@ -27,7 +27,7 @@ export const ErrorHandler = (error: InternalError, req: Request, res: Response, 
 				error.message = `${key} "${value}" `
 			})
 
-			return res.status(500).json({ error: `${t('mongo.duplicate')}: ${error.message}` })
+			return res.status(409).json({ error: `${t('mongo.duplicate')}: ${error.message}` })
 		}
 
 		return res.status(500).json({ error: t('error.internal') })
