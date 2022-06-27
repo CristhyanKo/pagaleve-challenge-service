@@ -21,5 +21,15 @@ export const ErrorHandler = (error: InternalError, req: Request, res: Response, 
 			console.log(`🔥 [ERROR] ${error.message}`)
 			return res.status(500).json({ error: t('error.payload') })
 		}
+
+		if (error.name === 'MongoServerError' && error.code === 11000 && error.keyValue) {
+			Object.entries(error.keyValue).forEach(([key, value]) => {
+				error.message = `${key} "${value}" `
+			})
+
+			return res.status(500).json({ error: `${t('mongo.duplicate')}: ${error.message}` })
+		}
+
+		return res.status(500).json({ error: t('error.internal') })
 	}
 }

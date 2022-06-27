@@ -6,5 +6,7 @@
 	"service.base.delete": "Registro deletado com sucesso",
 	"customer.name.required": "[name] o campo Nome é obrigatório",
 	"customer.email.required": "[email] o campo Email é obrigatório",
-	"customer.phone.required": "[phone] o campo Telefone é obrigatório"
+	"customer.phone.required": "[phone] o campo Telefone é obrigatório",
+	"error.internal": "Erro interno",
+	"field.mongo.exist": "O campo já existe"
 }

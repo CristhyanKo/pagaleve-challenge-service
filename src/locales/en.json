@@ -6,5 +6,7 @@
 	"service.base.delete": "Registration successfully deleted",
 	"customer.name.required": "[name] is required",
 	"customer.email.required": "[email] is required",
-	"customer.phone.required": "[phone] is required"
+	"customer.phone.required": "[phone] is required",
+	"error.internal": "Internal error",
+	"mongo.duplicate": "Field already registered"
 }
